@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="8sp">
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/mainCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            app:cardBackgroundColor="@color/colorTest"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="16dp">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+            <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="italic"/>
+
+            <TextView
+                    android:id="@+id/sumTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/nameTV"
+                    app:layout_constraintStart_toEndOf="@+id/nameTV"/>
+            <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textSize="12sp"
+                    android:id="@+id/delButton"
+                    android:text="@string/del_button"
+                    android:background="@drawable/button_shape_red_oval"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
