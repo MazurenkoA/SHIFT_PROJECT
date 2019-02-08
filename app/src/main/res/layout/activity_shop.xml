@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".shops.ShopListActivity">
+        tools:context=".purcheses.PurchaseListActivity">
     <android.support.v7.widget.RecyclerView
             android:id="@+id/shopRecyclerView"
             android:layout_width="0dp"
@@ -16,9 +16,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".shops.ShopListActivity"
+            tools:context=".purcheses.PurchaseListActivity"
     >
-
 
     </android.support.v7.widget.RecyclerView>
 
@@ -31,5 +30,12 @@
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/addPurchesButton"
+            style="@style/AddButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,27 +1,23 @@
 package com.example.shift_project.category
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.shift_project.R
+import com.example.shift_project.backend.Category
 import com.example.shift_project.const_value.EXTRA_MESSAGE
-import com.example.shift_project.just_test.TestCategory
-import com.example.shift_project.just_test.TestProduct
-import com.example.shift_project.model.response.BudgetResponse
-import com.example.shift_project.model.response.BudgetsResponse
-import com.example.shift_project.shops.ShopListActivity
+import com.example.shift_project.purcheses.PurchaseListActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class CategoryListActivity : AppCompatActivity(), CategoriesView {
 
     private val adapter = CategoryAdapter {
-        val intent = Intent(this, ShopListActivity::class.java)
-                .apply {
-                    putExtra(EXTRA_MESSAGE, 1)
-                }
+        val intent = Intent(this, PurchaseListActivity::class.java)
+        .apply {
+            putExtra(EXTRA_MESSAGE, it)
+        }
 
         startActivity(intent)
     }
@@ -34,7 +30,6 @@ class CategoryListActivity : AppCompatActivity(), CategoriesView {
 
         categoriesRecyclerView.layoutManager = LinearLayoutManager(this)
         categoriesRecyclerView.adapter = adapter
-
     }
 
     override fun onStart() {
@@ -48,7 +43,7 @@ class CategoryListActivity : AppCompatActivity(), CategoriesView {
         presenter.unbindView()
     }
 
-    override fun showCategories(categories: List<BudgetResponse>) {
+    override fun showCategories(categories: List<Category>) {
         adapter.setCategories(categories)
     }
 }

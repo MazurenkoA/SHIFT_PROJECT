@@ -30,7 +30,7 @@
             tools:context=".category.CategoryListActivity"/>
 
     <Button
-            android:id="@+id/addButton"
+            android:id="@+id/addCategoryButton"
             style="@style/AddButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

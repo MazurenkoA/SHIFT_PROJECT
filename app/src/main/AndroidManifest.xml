@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-                android:name=".shops.ShopListActivity"
+                android:name=".purcheses.PurchaseListActivity"
                 android:screenOrientation="portrait">
         </activity>
     </application>

@@ -9,7 +9,7 @@
     </style>
 
     <style name="AddButton">
-        <item name="android:background">@drawable/button_shape_yellow_oval</item>
+        <item name="android:background">@drawable/button_shape_gold_oval</item>
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:text">@string/add_button</item>

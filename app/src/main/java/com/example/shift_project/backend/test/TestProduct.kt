@@ -1,4 +1,4 @@
-package com.example.shift_project.just_test
+package com.example.shift_project.backend.test
 
 class TestProduct (var id: Int, var idCategory: Int, var name: String, var sum: Double){
     fun getInfo(): String{

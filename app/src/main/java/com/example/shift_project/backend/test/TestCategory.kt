@@ -1,4 +1,4 @@
-package com.example.shift_project.just_test
+package com.example.shift_project.backend.test
 
 import java.io.Serializable
 

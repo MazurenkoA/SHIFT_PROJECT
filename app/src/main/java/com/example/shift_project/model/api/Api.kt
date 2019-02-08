@@ -1,16 +1,18 @@
 package com.example.shift_project.model.api
 
-import com.example.shift_project.model.request.Simple
-import com.example.shift_project.model.response.BudgetsResponse
+import com.example.shift_project.model.request.SetBudget
+import com.example.shift_project.model.response.BudgetResponse
+import com.example.shift_project.model.response.CategoryResponse
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface Api {
-    @GET("/categories/1")
-    fun getAll(): Call<BudgetsResponse>
+    @GET("/budgets")
+    fun getBudget(): Call<BudgetResponse>
+
+    @GET("/categories/{id}/")
+    fun getCategory(@Path("id") gid: Int): Call<CategoryResponse>
 
     @POST("/test")
-    fun test(@Body simple: Simple)
+    fun test(@Body simple: SetBudget)
 }

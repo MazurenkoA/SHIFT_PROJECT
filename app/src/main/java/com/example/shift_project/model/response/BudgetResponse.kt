@@ -1,17 +1,9 @@
 package com.example.shift_project.model.response
 
-import java.util.*
+import java.util.concurrent.atomic.AtomicLong
 
-class BudgetResponse (
-    val purchaseList: List<Purchase>,
-    val name: String,
-    val budget : Long,
-    val id : Int,
-    val consumption : Int
-    )
-class Purchase (
-     var id : Int,
-     var name : String,
-     var cost : Int,
-    var date : Date
+class BudgetResponse(
+    var categoryListString : List<String>,
+    var budget : Long,
+    var consumption : Long
 )

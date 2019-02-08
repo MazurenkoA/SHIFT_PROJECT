@@ -1,4 +1,4 @@
-package com.example.shift_project.shops
+package com.example.shift_project.purcheses
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -6,14 +6,14 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.example.shift_project.const_value.EXTRA_MESSAGE
 import com.example.shift_project.R
-import com.example.shift_project.just_test.TestProduct
+import com.example.shift_project.backend.Purchase
 import kotlinx.android.synthetic.main.activity_shop.*
 
 
-class ShopListActivity : AppCompatActivity(), ShopsView {
+class PurchaseListActivity : AppCompatActivity(), PurchaseView {
 
     private val adapter = ShopAdapter ()
-    private val presenter = ShopPresenter()
+    private val presenter = PurchasePresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class ShopListActivity : AppCompatActivity(), ShopsView {
         presenter.unbindView()
     }
 
-    override fun showShops(shop: List<TestProduct>) {
+    override fun showShops(shop: List<Purchase>) {
         adapter.setShops(shop)
     }
 
